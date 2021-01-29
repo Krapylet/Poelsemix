@@ -1,0 +1,37 @@
+	"hurtigbrille"
+{
+	"BaseClass"                 "ability_lua"
+	"AbilityTextureName"        "hurtigbrille"
+	"ScriptFile"			"heroes/hero_brian/hero_brian"
+	"MaxLevel"                  "4"
+	"AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+	"AbilityCooldown"               "15"
+	"AbilityManaCost"               "100"
+	
+
+		"precache"
+        {
+        "particle" "particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
+        }
+	
+	
+	"AbilitySpecial"
+	{
+	    "01"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "move_up_self"      "20 30 40 50"	
+	    }
+		"02"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "aspeed"      "10 20 30 40"
+	    }
+		"03"
+	    {
+	        "var_type"          "FIELD_INTEGER"
+	        "duration"      "4 5 6 7"
+	    }
+
+	}
+}

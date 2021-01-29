@@ -12,3 +12,12 @@
 !*docs/setup/*
 !*game/dota_addons/poelsemix/*
 !*game/dota_addons/vpks/1335473896/*
+
+*.bin
+*.cfg
+*.soc
+*.tmp
+
+*.vmat_c
+*.vagrp_c
+*.vmesh_c
