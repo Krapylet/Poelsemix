@@ -1,0 +1,56 @@
+"caro_crossfit"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"caro_crossfit"
+	"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+
+
+		
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"agility"			"6 12 18 24"
+		}
+		"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"strength"			"4 8 12 16"
+		}
+	
+		"03"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"as"			"10 20 30 40"
+		}
+	}
+
+	"Modifiers"
+	{
+		"crossfit_mod"
+		{
+			"Passive"	"1"
+			"IsHidden"	"1"
+						"Properties"
+			{
+
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%strength"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%agility"
+				"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT" "%as"
+			}
+	
+		}
+
+	
+	}
+}

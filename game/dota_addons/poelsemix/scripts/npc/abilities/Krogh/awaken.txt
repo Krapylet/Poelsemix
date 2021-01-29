@@ -1,0 +1,94 @@
+"awaken"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"awaken"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"MaxLevel"						"1"
+	"RequiredLevel"       				        "16"
+	// Precache
+	//-------------------------------------------------------------------------------------------------------------
+
+
+		"precache"
+	{	
+		"soundfile" "soundevents/krogh_soundevent.vsndevts"
+		"particle"	"particles/status_fx/status_effect_doom.vpcf"
+	}	
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		
+		"01"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"agility"			"40"
+		}
+	"02"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"strength"			"80"
+		}
+		"03"
+		{
+			"var_type"							"FIELD_FLOAT"
+			"basicrate"			"1.4"
+		}
+		"04"
+		{
+			"var_type"							"FIELD_INTEGER"
+			"hp"			"100"
+		}
+				"05"
+		{
+			"var_type" "FIELD_FLOAT"
+			"model_scale" "1.8"
+		}
+	}
+	
+
+
+		
+
+	"Modifiers"
+	{
+		"awaken_mod"
+		{
+					"StatusEffectName"		"particles/status_fx/status_effect_doom.vpcf"
+			"StatusEffectPriority"	"1"
+			"Passive"	"1"
+			"OnCreated"
+			{	
+					"RunScript"
+				{
+					"ScriptFile" "heroes/scale_model.lua"
+					"Function" "ChangeModel"
+					
+				}
+						"FireSound"
+						{
+					"EffectName" "awaken"
+					"Target" "CASTER"
+					
+
+			
+						}
+			}
+			"IsHidden"	"1"
+						"Properties"
+			{
+
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%strength"
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS" "%agility"
+				"MODIFIER_PROPERTY_HEALTH_BONUS" 		"%hp"
+				"MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%basicrate"
+			}
+	
+		}
+
+	
+	}
+}
