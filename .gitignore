@@ -1,0 +1,14 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!LICENSE
+!README.md
+!credits.md
+
+# if the files to be tracked are in subdirectories
+!*/content/dota_addons/poelsemix/*
+!*docs/setup/*
+!*game/dota_addons/poelsemix/*
+!*game/dota_addons/vpks/1335473896/*
