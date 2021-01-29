@@ -5,6 +5,7 @@ In addition to the original authors and their supporters:
 - StevenDankMeister
 - Kroqh
 - laurits-mumberg
+
 ---------------- Original credits ------------------
 # THANKS TO
 
