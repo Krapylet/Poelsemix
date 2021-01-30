@@ -267,15 +267,13 @@ end
 -- Event: On NPC Spawn
 --------------------------------------------------------------------------------
 function COverthrowGameMode:OnNPCSpawned( event )
+	
 	local hero = EntIndexToHScript( event.entindex )
 	
 	if hero:IsRealHero() and hero.FirstSpawn == nil then
-		
 		hero.FirstSpawn = true
+		hero:AddItemByName("item_courier")
 		COverthrowGameMode:OnHeroInGame(hero)	
-		-- hero:AddItemByName("item_courier")
-		local courier = CreateUnitByName("npc_dota_courier", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeam())
-		courier:SetControllableByPlayer(hero:GetPlayerID(), false)
 	end
 	
 	if hero:GetUnitName() == "npc_dota_hero_pugna" then
