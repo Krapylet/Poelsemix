@@ -35,7 +35,7 @@
 						"Target"
 						{
 							"Center"		"CASTER"
-							"radius"		"8000"
+							"radius"		"4300"
 							"Types"			"DOTA_UNIT_TARGET_HERO"
 							"Flags"			"DOTA_UNIT_TARGET_FLAG_DEAD"
 						}

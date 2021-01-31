@@ -8,10 +8,11 @@
 !credits.md
 
 # if the files to be tracked are in subdirectories
-!*/content/dota_addons/poelsemix/*
-!*docs/setup/*
-!*game/dota_addons/poelsemix/*
-!*game/dota_addons/vpks/1335473896/*
+!/content/dota_addons/poelsemix/*
+!/docs/setup/*
+!/game/dota_addons/poelsemix/*
+!/game/dota_addons/poelsemix/scripts/npc/heroes/fox/*
+!/game/dota_addons/vpks/1335473896/*
 
 *.bin
 *.cfg

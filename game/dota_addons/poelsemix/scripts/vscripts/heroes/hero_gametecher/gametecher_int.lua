@@ -9,7 +9,7 @@ function AddIntellect(keys)
 	ability.currentStacks = ability.currentStacks+1
 
 	caster:ModifyIntellect(ability:GetSpecialValueFor("bonus_intellect"))
-	caster:CalculateStatBonus()
+	caster:CalculateStatBonus(true)
 
 	caster:SetModifierStackCount("modifier_stat_boost", ability, ability.currentStacks)
 end 
