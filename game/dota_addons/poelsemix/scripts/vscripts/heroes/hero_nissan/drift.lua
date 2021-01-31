@@ -56,13 +56,14 @@ end
 function drift:OnSpellStart()
 	if IsServer() ~= true then return end
 
-	self:GetCaster():EmitSound("nissan_drift")
+	local caster = self:GetCaster()
 
+	caster:EmitSound("nissan_drift")
+	
 	--local ability = self:GetAbility()
 	local radius = self:GetSpecialValueFor("hit_radius")
 	local burn_duration = self:GetSpecialValueFor("burn_duration")
 
-	local caster = self:GetCaster()
 	local target_pos = self:GetCursorPosition()
 	local caster_pos = caster:GetAbsOrigin()
 
@@ -71,24 +72,24 @@ function drift:OnSpellStart()
 	local dash_duration = self:GetSpecialValueFor("dash_duration")
 
 	-- Talent
-  if caster:HasTalent("special_bonus_nissan_2") then
-    dash_duration = dash_duration + caster:FindAbilityByName("special_bonus_nissan_2"):GetSpecialValueFor("value")
-  end
+  	if caster:HasTalent("special_bonus_nissan_2") then
+	    dash_duration = dash_duration + caster:FindAbilityByName("special_bonus_nissan_2"):GetSpecialValueFor("value")
+  	end
 
 	local direction = (target_pos - caster_pos):Normalized()
 
 	caster:SetForwardVector(direction)
 
 	local forward_direction = caster:GetForwardVector()
-  local right_direction = caster:GetRightVector()
-  local caster_angles = caster:GetAngles()
+  	local right_direction = caster:GetRightVector()
+  	local caster_angles = caster:GetAngles()
 
 	local start_time = GameRules:GetGameTime()
 	local ellipse_center = caster_pos + forward_direction * (dash_length / 2)
 
 	local pfx = ParticleManager:CreateParticle( "particles/units/heroes/hero_phoenix/phoenix_icarus_dive.vpcf", PATTACH_WORLDORIGIN, nil )
 
-  caster:AddNewModifier(caster, self, "modifier_drift_dummy", {duration = dash_duration})
+  	caster:AddNewModifier(caster, self, "modifier_drift_dummy", {duration = dash_duration})
 
 	caster:SetContextThink(DoUniqueString("drift_update"), function() 
 		ParticleManager:SetParticleControl(pfx, 0, caster:GetAbsOrigin() + caster:GetRightVector() * 32 )

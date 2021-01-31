@@ -20,7 +20,7 @@ end
 require( "events" )
 require( "items" )
 require( "utility_functions" )
-require("timers")
+require( "timers" )
 require( "poelse_funcs" )
 
 ---------------------------------------------------------------------------

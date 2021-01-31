@@ -272,7 +272,6 @@ function COverthrowGameMode:OnNPCSpawned( event )
 	
 	if hero:IsRealHero() and hero.FirstSpawn == nil then
 		hero.FirstSpawn = true
-		hero:AddItemByName("item_courier")
 		COverthrowGameMode:OnHeroInGame(hero)	
 	end
 	
