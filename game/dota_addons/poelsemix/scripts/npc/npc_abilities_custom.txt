@@ -319,7 +319,7 @@
 				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 				"Aura_Types"			"DOTA_UNIT_TARGET_HERO"
 				"Aura_ApplyToCaster"	"0"
-				"Aura_Flags"    		"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+				"Aura_Flags"    		"DOTA_UNIT_TARGET_FLAG_DEAD"
 
 				"States"
 				{
@@ -340,7 +340,7 @@
 							"Center"		"CASTER"
 							"radius"		"3400"
 							"Types"			"DOTA_UNIT_TARGET_HERO"
-							"Flags"			"DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS"
+							"Flags"			"DOTA_UNIT_TARGET_FLAG_DEAD"
 						}
 						"XPAmount"		"6"
 						"SplitEvenly"	"0"
