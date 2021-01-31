@@ -1,0 +1,337 @@
+"DOTAAbilities"
+{	
+	"drift"
+	{
+		"BaseClass"					"ability_lua"
+		"ScriptFile"				"heroes/hero_nissan/drift.lua"
+		"AbilityTextureName"		"nissan_drift_icon"
+
+		"MaxLevel"						"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15 13 11 9"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 110 120 130"
+		
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_phoenix/phoenix_icarus_dive.vpcf"
+			"particle"					"particles/units/heroes/hero_phoenix/phoenix_icarus_dive_burn_debuff.vpcf"
+			"soundfile" 				"soundevents/nissan_soundevent.vsndevts"
+		}
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dash_length"			"1400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dash_width"			"500"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hit_radius"			"200"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_duration"			"4.0 4.5 5.0 5.5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_second"		"30 45 60 75"
+				"LinkedSpecialBonus" "special_bonus_nissan_3"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_tick_interval"	"0.5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"dash_duration"			"2.0"
+			}
+			"8"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"stop_radius"			"300"
+			}
+			"9"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cast_point"			"0.1"
+			}
+		}
+	}
+	"longlights"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_nissan/longlights"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+
+		"AbilityTextureName"			"nissan_longlights_icon"
+		"AbilityCooldown"				"25 24 23 22"
+		"AbilityManaCost"				"100 110 120 130"
+		"AbilityCastPoint"				"0.2"
+
+		"precache"
+		{
+	    "particle"        "particles/heroes/nissan/nissan_lights.vpcf"
+	    "particle"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_blinding_light_debuff.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+		  "01"
+			{
+				"var_type" "FIELD_FLOAT"
+				"duration" "5 7 9 11"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"length" "600"
+				"LinkedSpecialBonus" "special_bonus_nissan_1"
+			}
+		    "03"
+		    {
+		      "var_type" "FIELD_INTEGER"
+		      "width" "180"
+		    }
+		    "04"
+		    {
+		      "var_type" "FIELD_FLOAT"
+		      "damage_pr_tick" "2.0 2.5 3.0 3.5"
+		    }
+		    "05"
+		    {
+		      "var_type" "FIELD_INTEGER"
+		      "miss_chance" "85 90 95 100"
+		    }
+		}
+	}
+	"race"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_nissan/race"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityType" 					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+		"AbilityTextureName"			"nissan_race_icon"
+		"AbilityCooldown"				"100 80 60"
+		"AbilityManaCost"				"100 150 200"
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.2"
+
+		"precache"
+		{
+			"particle"        "particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
+			"soundfile"       "soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
+		}
+
+		"AbilitySpecial"
+		{
+		  "01"
+			{
+				"var_type" "FIELD_FLOAT"
+				"duration" "13"
+			}
+			"02"
+			{
+				"var_type" "FIELD_INTEGER"
+				"damage" "600 750 900"
+				"LinkedSpecialBonus" "special_bonus_nissan_4"
+			}
+			"03"
+			{
+				"var_type" "FIELD_INTEGER"
+				"stacks" "2000"
+			}
+		}
+	}
+	"runover"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"			"heroes/hero_nissan/runover"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"		"nissan_runover_icon"
+		"AbilityType" 					"DOTA_ABILITY_TYPE_BASIC"
+		
+		"AbilityCooldown"				"19 17 15 13"
+		"AbilityManaCost"       "110 120 130 140"
+	  "AbilityCastPoint"      "1.0"
+
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+			"particle"		"particles/units/heroes/hero_techies/techies_suicide_base.vpcf"
+			"particle"    "particles/units/heroes/hero_phoenix/phoenix_fire_spirit_burn.vpcf"
+		}
+
+		"AbilitySpecial"
+		{
+		  "01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"bonus_movespeed" "30 35 40 45"
+			}
+			"02"
+			{
+				"var_type" "FIELD_FLOAT"
+				"duration"	"4 5 6 7"
+			}
+			"03"
+			{
+				"var_type" "FIELD_FLOAT"
+				"stun_duration"	"0.6"
+			}
+		    "04"
+		    {
+		      "var_type" "FIELD_FLOAT"
+		      "damage" "80 110 140 170"
+		    }
+		    "05"
+		    {
+		      "var_type" "FIELD_INTEGER"
+		      "radius"   "300"
+		    }
+		}
+	}
+	//=================================================================================================================
+	// Nissan talent 1 (level 15): long lights more length
+	//=================================================================================================================
+	"special_bonus_nissan_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"LinkedAbility"
+		{
+				"01"	"longlights"
+		}	
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"value" "600"
+			}
+		}	
+	}
+	//=================================================================================================================
+	// Nissan talent 2 (level 20): double drift
+	//=================================================================================================================
+	"special_bonus_nissan_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"LinkedAbility"
+		{
+				"01"	"drift"
+		}	
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"value" "2"
+			}
+		}	
+	}
+	//=================================================================================================================
+	// Nissan talent 3 (level 20): +50 drift burn damage
+	//=================================================================================================================
+	"special_bonus_nissan_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"LinkedAbility"
+		{
+				"01"	"drift"
+		}	
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"value" "50"
+			}
+		}	
+	}
+	//=================================================================================================================
+	// Nissan talent 4 (level 25): race damage
+	//=================================================================================================================
+	"special_bonus_nissan_4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"special_bonus_undefined"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"LinkedAbility"
+		{
+				"01"	"race"
+		}	
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" "FIELD_INTEGER"
+				"value" "400"
+			}
+		}	
+	}
+}

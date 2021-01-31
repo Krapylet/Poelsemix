@@ -1,0 +1,184 @@
+"DOTAAbilities"
+{	
+	//=================================================================================================================
+	// Antimage Spell Shield -- fox shine//=================================================================================================================
+	// Antimage Spell Shield
+	//=================================================================================================================
+	"fox_shine"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"antimage_spell_shield"
+		"ScriptFile"					"heroes/hero_fox/hero_fox"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20.0 16.0 12.0 8.0"
+		"AbilityCastPoint"				"0.0"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"					"particles/units/heroes/hero_antimage/antimage_blink_end_glow.vpcf"
+			"particle"					"particles/units/heroes/hero_antimage/antimage_spellshield.vpcf"
+			"particle"					"particles/units/heroes/hero_antimage/antimage_spellshield_reflect.vpcf"
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_resistance"		"20 35 50 65"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"active_duration"		"5"				
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"internal_cooldown"		"6"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"spellshield_max_distance"	"2500"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Pangolier's Rolling Thunder
+	//=================================================================================================================
+	"fox_wavedash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/hero_fox/hero_fox"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityTextureName"			"pangolier_gyroshell"
+		"FightRecapLevel"				"1"
+		"HasScepterUpgrade"				"0"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_pangolier.vsndevts"
+			"soundfile"		"soundevents/voscripts/game_sounds_vo_pangolin.vsndevts"
+			"model"			"models/heroes/pangolier/pangolier_gyroshell.vmdl"
+			"model" 		"models/heroes/pangolier/pangolier_gyroshell2.vmdl"
+		}
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"50 45 40"
+		"AbilityDuration"				"9.5"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"200 275 350"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tick_interval"			"0.5"
+			}			
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"6.0 7.0 8.0"
+			}
+		}
+	}
+
+	"fox_ult"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"Soren4"
+		"ScriptFile"					"heroes/hero_fox/hero_fox"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0 0 0 0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16.0 16.0 16.0 16.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"140 150 160 170"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"hp_percentage"		"26"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bounce_height"		"1000"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bounce_lengthmultiplier"		"3"
+			}
+		}
+
+		"precache"
+		{
+			"particle"  "particles/status_fx/status_effect_shaman_shackle.vpcf" 	
+			"particle"	"particles/units/heroes/hero_shadowshaman/shadowshaman_shackle.vpcf"
+			"soundfile" "soundevents/Soren_sounds.vsndevts"
+
+		}
+	}
+}
