@@ -1,12 +1,22 @@
-# Ignore everything
-content/**/*
-game/**/*
 steam_appid.txt
 
-# if the files to be tracked are in subdirectories
-!/content/dota_addons/poelsemix/
-!/game/dota_addons/poelsemix/
-!/game/dota_addons/vpks/1335473896/
+content/dota_addons/*
+content/_toolsautosave/*
+content/core/*
+content/dota/*
+content/dota_addons/*
+
+game/_toolsettings/*
+game/bin/*
+game/core/*
+game/dota/*
+game/dota/*
+game/dota_addons/*
+game/dota_koreana/*
+game/dota_lv/*
+game/dota_russian/*
+game/dota_schinese/*
+game/thirdpartylegalnotices.txt
 
 *.bin
 *.cfg
@@ -16,4 +26,15 @@ steam_appid.txt
 *.vmat_c
 *.vagrp_c
 *.vmesh_c
+*.vanim_c
+
+# working directories we want to keep synced:
+!/game/dota_addons/poelsemix/**/*.txt
+!/game/dota_addons/poelsemix/**/*.lua
+!/content/dota_addons/poelsemix/**/*.obj
+!/content/dota_addons/poelsemix/**/*.png
+!/content/dota_addons/poelsemix/**/*.psd
+
+
+
 
