@@ -186,7 +186,7 @@
 		
 		"AbilityCooldown"				"19 17 15 13"
 		"AbilityManaCost"       "110 120 130 140"
-	  "AbilityCastPoint"      "1.0"
+	  	"AbilityCastPoint"      "1.0"
 
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
 

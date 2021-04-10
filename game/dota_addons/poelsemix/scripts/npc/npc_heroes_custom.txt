@@ -1,5 +1,7 @@
 #base heroes/nissan/hero.txt
 #base heroes/fox/hero.txt
+#base heroes/shadow/hero.txt
+#base heroes/joah/hero.txt
 
 "DOTAHeroes"
 {
