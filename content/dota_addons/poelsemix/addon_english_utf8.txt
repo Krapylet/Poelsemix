@@ -25,7 +25,7 @@
           		
 		"npc_dota_hero_bounty_hunter"		"Bounty Hunter (Modified)"
 		"npc_dota_hero_necrolyte"			"Necrophos (Modified)"
-		"npc_dota_hero_riki"				"Riki (Modified)"
+		"npc_dota_hero_riki"				"Shadow"
 		"npc_dota_hero_silencer"			"Silencer (Modified)"
 		"npc_dota_hero_zuus"				"Zeus (Modified)"
 		"npc_dota_hero_pudge"				"Pudge (Modified)"
@@ -160,6 +160,18 @@
 
 
 		// ******************** ITEMS ********************
+
+//=================================================================================================================
+// Shadow
+//=================================================================================================================
+		
+"npc_dota_hero_riki"                                             		          "Shadow"
+"shadow"                                                                          "Shadow"
+
+		"DOTA_Tooltip_ability_bonus_to_stealth"											  "bonus to stealth"
+		"DOTA_Tooltip_ability_bonus_to_stealth_Description"								  "Wow that's a lot of stealth, like 'you are hard to see' lot"
+		"DOTA_Tooltip_ability_bonus_to_stealth_fade_delay"								  "Fade Delay:"
+
 //=================================================================================================================
 // Teemo
 //=================================================================================================================
@@ -351,7 +363,7 @@
 		
 "DOTA_Tooltip_ability_hurtigbrille_aspeed"                                        "AGILITY:"
 
-"DOTA_Tooltip_ability_hurtigbrille_duration"                                      "DURATION:
+"DOTA_Tooltip_ability_hurtigbrille_duration"                                      "DURATION:"
 
 
 

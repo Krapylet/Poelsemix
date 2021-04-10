@@ -1,5 +1,7 @@
 #base heroes/nissan/abilities.txt
 #base heroes/fox/abilities.txt
+#base heroes/shadow/abilities.txt
+#base heroes/joah/abilities.txt
 
 "DOTAAbilities"
 {
