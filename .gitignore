@@ -27,6 +27,7 @@ game/thirdpartylegalnotices.txt
 *.vagrp_c
 *.vmesh_c
 *.vanim_c
+*.vsndects_c
 
 # working directories we want to keep synced:
 !/game/dota_addons/poelsemix/**/*.txt
